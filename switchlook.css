@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Playfair ;
+  src: url(/Font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the body height to 100% of the viewport height */
+  margin: 0; /* Remove default body margin */
+  transition: background-color 700ms ease;
+  background-color: #EDEADE;
+}
+div{
+  display:block;
+}
+body.dark-mode {
+  background-color:		#303438;
+}
+h1{
+  margin-bottom: 20px;
+  font-family: Playfair;
+  font-size: 50px;
+}
+
+#div1 {
+  text-align: center;
+  display: block;
+
+}
+section{
+  display: flex;
+  align-items: center;
+}
+/* Switch background unchecked  */
+#div1 label {
+  display: inline-block;
+  position: relative;
+  height: 44px;
+  width: 90px;
+  background-color: #343434;
+  box-shadow: inset 0px 0px 5px white ;
+
+  cursor: pointer;
+  color: transparent;
+  border-radius: 22px;
+  outline: 20px solid bl; /* Add an outline to the button */
+  transition: background-color 500ms ease;
+}
+
+#div1 input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  bottom: 0;
+}
+
+/* Switch background checked  */
+#div1 input:checked + label {
+  background-color: #EDEADE;
+  box-shadow: inset 0px 0px 5px black;
+}
+
+/* Circle unchecked */
+#div1 label:after {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 2px;
+  right: 48px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
+  box-shadow: 2px 0px 0px rgba(93, 96, 10, 0.15);
+  transition: right 500ms ease, background-color 500ms ease, box-shadow 500ms ease;
+}
+
+/* Circle checked */
+#div1 input:checked + label:after {
+  right: 2px;
+  background-color: black; 
+  box-shadow: 0px 0px 5px white; 
+}
+
